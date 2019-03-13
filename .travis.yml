@@ -1,13 +1,11 @@
 sudo: required
 services:
   - docker
-
 before_install:
   - docker build -t gitvishvjeet/docker-react -f Dockerfile.dev .
 
 script:
   - docker run gitvishvjeet/docker-react npm run test -- --Coverage
-<<<<<<< HEAD
 
 deploy:
   provider: elasticbeanstalk
